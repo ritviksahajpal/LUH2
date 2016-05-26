@@ -17,8 +17,8 @@ import sys
 import os
 
 # General information about the project.
-project = 'shablona'
-copyright = '2015, Ariel Rokem'
+project = 'LUH2'
+copyright = '2015, Ritvik Sahajpal'
 
 currentdir = os.path.abspath(os.path.dirname(__file__))
 ver_file = os.path.join(currentdir, '..', project, 'version.py')
