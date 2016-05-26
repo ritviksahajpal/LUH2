@@ -4,8 +4,8 @@ try:
 except ImportError:
     from distutils.core import setup
     
-# Get version and release info, which is all stored in shablona/version.py
-ver_file = os.path.join('shablona', 'version.py')
+# Get version and release info, which is all stored in LUH2/version.py
+ver_file = os.path.join('LUH2', 'version.py')
 with open(ver_file) as f:
     exec(f.read())
 
