@@ -1,0 +1,10 @@
+*.pyc
+*~
+GLM/constants.pyc
+GLM/util.pyc
+GLM/.idea/workspace.xml
+GLM/.idea/workspace.xml
+GLM/.idea/workspace.xml
+GLM/Code/.idea/*
+*.xml
+

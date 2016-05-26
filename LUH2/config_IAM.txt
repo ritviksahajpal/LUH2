@@ -1,0 +1,169 @@
+[PROJECT]
+; Name of project directory (to be created within out_dir)
+project_name = GLM
+; A log file is created as Log_<TAG>.txt
+TAG = preproc_IAM
+
+[PATHS]
+win_prjdir = C:/Users/ritvik/Documents/PhD/Projects/
+mac_prjdir = /Users/ritvik/Documents/Projects/
+win_dropbox = C:\
+mac_dropbox = /Users/ritvik/Dropbox/GLM_Sharing/Diagnostics/
+; Directory of IAM inputs
+base_dir = GLM/Input/
+gcam_dir = SSP4_37_Downscaled/
+; Output directory
+out_dir = GLM/Output/
+; continent and country codes directory
+codes_dir = other/ccodes/
+
+[CONTROL]
+SHFT_MAP = Andreas
+PREPROCESS_GCAM = False
+PREPROCESS_IMAG = False
+CONVERT_WH = True
+PLOT_HYDE = False
+do_LUH1 = False
+do_email = False
+email_list = ['ritvik@umd.edu']
+ending_diag_cols = ['Hurtt 2011', 'Hurtt 2006', 'Units', 'Reference data']
+; Age beyond which secondary is assumed to be mature
+MATURITY_AGE = 20.0
+
+[COUNTRIES]
+FAO_CONCOR = FAO/FAO_ID_concordance.csv
+
+[LUMIP_DATA]
+ccodes = /lumip_data/other/ccodes/ccodes_quarter_deg_new.txt
+; quarter degree cell area
+careaq = /lumip_data/other/cellarea/cellarea_quarter_deg.txt
+; half degree cell area
+careah = /lumip_data/other/cellarea/cellarea_halfdeg.txt
+; one degree cell area
+careao = /lumip_data/other/cellarea/cellarea_1deg.txt
+
+[CODES]
+ccodes_file = ccodes_list_quarter_deg_sort2wh.txt
+contcodes_file = cont_codes_quarter_deg_list_sort2wh.txt
+
+[SHIFTING]
+; Map shifting cultivation changes by country or continent
+shft_by_country = True
+butler_ascii = /shift_cult/shiftcult_map_quarter_deg.txt
+andreas_map = /shift_cult/SC_data_20160107_raster/Shift_cult_past_current_prediction_20160107_gr1DD.tif
+andreas_nc = /shift_cult/andreas_approach1.nc
+andreas_ascii = /shift_cult/andreas.asc
+andreas_ascii_2100 = /shift_cult/andreas_2100.asc
+
+[AGE]
+age_poulter = Age/global_forestAgeClasses_2011.nc
+
+[OTHER]
+vba = public_inputs/other/miami_biomass_v3/miami_vba_quarter_deg.txt
+rs_forest = other/rs_forest_data/rs_forest_loss_2012_quarter_deg.txt
+wh_file = other/wood_harvest/new_glm/woodharvest_850_2015_kaplan2.nc
+
+[GLM]
+folder_glm = ['LUH2_v1.0h']
+
+; Control parameters
+; Should the second dataset be plotted
+do_alternate = False
+legend_glm = LUH2
+legend_alt_glm = ''
+; Paths to glm input/output
+path_input = GLM/Input/
+path_glm_input = GLM/Input/LUH/
+path_glm_output = GLM/Output/GLM/ ; Output path
+; netCDF glm
+path_nc_states = states.nc
+path_nc_trans = transitions.nc
+path_nc_mgt  = management.nc
+; Second set of glm outputs (for comparison with first set)
+path_nc_alt_state = states.nc
+path_nc_alt_trans = transitions.nc
+; netCDF future glm
+path_nc_futr_mgt = management.nc
+path_nc_futr_states = states.nc
+; netCDF past + future glm
+path_nc_all_states = states_all.nc
+path_nc_all_mgt = management_all.nc
+; glm static data
+path_glm_carea = GLM/Input/LUH/v0.1/cellarea_quarter_deg.txt
+path_glm_stat = GLM/Input/LUH/v0.1/staticData_quarterdeg.nc
+path_glm_vba = GLM/Input/public_inputs/other/miami_biomass_v5/miami_vba_quarter_deg.txt
+path_glm_new_vba = GLM/Input/public_inputs/other/miami_biomass_v5/miami_vba_quarter_deg.txt
+
+[HYDE3.1]
+hyde31_crop_path = GLM/Input/lumip_data/hyde_2013/quarter_deg_grids_incl_urban/gcrop_1500_2015_quarterdeg_incl_urban.nc
+hyde31_othr_path = GLM/Input/lumip_data/hyde_2013/quarter_deg_grids_incl_urban/gothr_1500_2015_quarterdeg_incl_urban.nc
+hyde31_past_path = GLM/Input/lumip_data/hyde_2013/quarter_deg_grids_incl_urban/gpast_1500_2015_quarterdeg_incl_urban.nc
+hyde31_urbn_path = GLM/Input/lumip_data/hyde_2013/quarter_deg_grids_incl_urban/gurbn_1500_2015_quarterdeg_incl_urban.nc
+out_hyde31_path  = GLM/Output/GLM/HYDE3.1/
+
+[HYDE3.2_v0.3]
+hyde32_v0.3_crop_path = GLM/Input/lumip_data/hyde_3.2_v0.3/quarter_deg_grids_incl_urban/gcrop_850_2015_quarterdeg_incl_urban.nc
+hyde32_v0.3_othr_path = GLM/Input/lumip_data/hyde_3.2_v0.3/quarter_deg_grids_incl_urban/gothr_850_2015_quarterdeg_incl_urban.nc
+hyde32_v0.3_graz_path = GLM/Input/lumip_data/hyde_3.2_v0.3/quarter_deg_grids_incl_urban/ggraz_850_2015_quarterdeg_incl_urban.nc
+hyde32_v0.3_past_path = GLM/Input/lumip_data/hyde_3.2_v0.3/quarter_deg_grids_incl_urban/gpast_850_2015_quarterdeg_incl_urban.nc
+hyde32_v0.3_rang_path = GLM/Input/lumip_data/hyde_3.2_v0.3/quarter_deg_grids_incl_urban/grang_850_2015_quarterdeg_incl_urban.nc
+hyde32_v0.3_urbn_path = GLM/Input/lumip_data/hyde_3.2_v0.3/quarter_deg_grids_incl_urban/gurbn_850_2015_quarterdeg_incl_urban.nc
+out_hyde32_v0.3_path  = GLM/Output/GLM/HYDE3.2_v0.3/
+
+[HYDE3.2_v1h_beta]
+hyde32_v1h_beta_crop_path = GLM/Input/lumip_data/hyde_3.2_v1h_beta/quarter_deg_grids_incl_urban/gcrop_850_2015_quarterdeg_incl_urban.nc
+hyde32_v1h_beta_othr_path = GLM/Input/lumip_data/hyde_3.2_v1h_beta/quarter_deg_grids_incl_urban/gothr_850_2015_quarterdeg_incl_urban.nc
+hyde32_v1h_beta_graz_path = GLM/Input/lumip_data/hyde_3.2_v1h_beta/quarter_deg_grids_incl_urban/ggraz_850_2015_quarterdeg_incl_urban.nc
+hyde32_v1h_beta_past_path = GLM/Input/lumip_data/hyde_3.2_v1h_beta/quarter_deg_grids_incl_urban/gpast_850_2015_quarterdeg_incl_urban.nc
+hyde32_v1h_beta_rang_path = GLM/Input/lumip_data/hyde_3.2_v1h_beta/quarter_deg_grids_incl_urban/grang_850_2015_quarterdeg_incl_urban.nc
+hyde32_v1h_beta_urbn_path = GLM/Input/lumip_data/hyde_3.2_v1h_beta/quarter_deg_grids_incl_urban/gurbn_850_2015_quarterdeg_incl_urban.nc
+out_hyde32_v1h_beta_path  = GLM/Output/GLM/HYDE3.2_v1h_beta/
+
+[HYDE3.2_march]
+hyde32_march_crop_path = GLM/Input/lumip_data/hyde_3.2_march/quarter_deg_grids_incl_urban/gcrop_850_2015_quarterdeg_incl_urban.nc
+hyde32_march_othr_path = GLM/Input/lumip_data/hyde_3.2_march/quarter_deg_grids_incl_urban/gothr_850_2015_quarterdeg_incl_urban.nc
+hyde32_march_graz_path = GLM/Input/lumip_data/hyde_3.2_march/quarter_deg_grids_incl_urban/ggraz_850_2015_quarterdeg_incl_urban.nc
+hyde32_march_past_path = GLM/Input/lumip_data/hyde_3.2_march/quarter_deg_grids_incl_urban/gpast_850_2015_quarterdeg_incl_urban.nc
+hyde32_march_rang_path = GLM/Input/lumip_data/hyde_3.2_march/quarter_deg_grids_incl_urban/grang_850_2015_quarterdeg_incl_urban.nc
+hyde32_march_urbn_path = GLM/Input/lumip_data/hyde_3.2_march/quarter_deg_grids_incl_urban/gurbn_850_2015_quarterdeg_incl_urban.nc
+out_hyde32_march_path  = GLM/Output/GLM/HYDE3.2_march/
+
+[HYDE3.2]
+hyde32_crop_path = GLM/Input/lumip_data/hyde_3.2/quarter_deg_grids_incl_urban/gcrop_850_2015_quarterdeg_incl_urban.nc
+hyde32_othr_path = GLM/Input/lumip_data/hyde_3.2/quarter_deg_grids_incl_urban/gothr_850_2015_quarterdeg_incl_urban.nc
+hyde32_graz_path = GLM/Input/lumip_data/hyde_3.2/quarter_deg_grids_incl_urban/ggraz_850_2015_quarterdeg_incl_urban.nc
+hyde32_past_path = GLM/Input/lumip_data/hyde_3.2/quarter_deg_grids_incl_urban/gpast_850_2015_quarterdeg_incl_urban.nc
+hyde32_rang_path = GLM/Input/lumip_data/hyde_3.2/quarter_deg_grids_incl_urban/grang_850_2015_quarterdeg_incl_urban.nc
+hyde32_urbn_path = GLM/Input/lumip_data/hyde_3.2/quarter_deg_grids_incl_urban/gurbn_850_2015_quarterdeg_incl_urban.nc
+out_hyde32_path  = GLM/Output/GLM/HYDE3.2/
+
+[MONFREDA]
+mon_data_dir = Monfreda/monfreda_data_and_processing_script/ascii_grids/
+
+[MIAMI_LU]
+miami_lu_nc = miami_lu/global_mlu_lu.region.nc
+miami_npp = miami_lu/miami_npp_quarter_deg.txt
+miami_vba = miami_lu/miami_vba_quarter_deg.txt
+
+[HOTSPOTS]
+path_hotspots = /GLM/Input/hotspots/hotspots.txt
+
+[GCAM]
+CROPS = ['LU_Corn.nc','LU_FiberCrop.nc','LU_MiscCrop.nc','LU_OilCrop.nc','LU_OtherGrain.nc','LU_PalmFruit.nc','LU_Rice.nc','LU_Root_Tuber.nc','LU_SugarCrop.nc']
+PASTURE = ['LU_FodderGrass.nc']
+FOREST = ['LU_forest.nc']
+URBAN = ['LU_urban.nc']
+GCAM_OUT = processed_GCAM.nc
+GCAM_CROPS = perc_crops.nc
+WOOD_HARVEST = wood_harvest.csv
+FERT_DATA = fertilizer.csv
+GCAM_START_YR = 2015
+GCAM_END_YR = 2100
+GCAM_STEP_YR = 5
+SKIP_GCAM_COLS = 9
+GCAM_MAPPING = gcam_region_country_mapping2015.xlsx
+
+[IMAGE]
+
+[MAGPIE]
+
