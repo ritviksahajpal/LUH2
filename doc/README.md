@@ -7,11 +7,11 @@ LUH2
 
 The project has the following structure:
 
-	shablona -
+	LUH2 -
 			  |- README.md
-			  |- shablona
+			  |- LUH2
 					|- __init__.py
-					|- shablona.py
+					|- LUH2.py
 					|- data
 						|- ...
 					|- tests
