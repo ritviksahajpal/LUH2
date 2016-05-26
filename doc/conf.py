@@ -30,6 +30,21 @@ currentdir = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(os.path.join(currentdir, 'tools'))
 import buildmodref
 
+import sys
+from mock import MagicMock
+
+
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+            return Mock()
+
+MOCK_MODULES = ['gdalconst', 'pandas.core.common', 'pygeoprocessing', 'gdal', 'shapefile', 'numpy', 'pandas',
+                'rasterio', 'geopy', 'tqdm', 'joblib',
+                'geocoder', 'geopy.geocoders', 'geopy.exc', 'functools32', 'netCDF4', 'skimage.measure',
+                'pandas.core.common', 'scikit-image', 'skimage']
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+
 # autogenerate api documentation
 # (see https://github.com/rtfd/readthedocs.org/issues/1139)
 def generateapidoc(_):
