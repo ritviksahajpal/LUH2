@@ -29,15 +29,6 @@ source_version = __version__
 currentdir = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(os.path.join(currentdir, 'tools'))
 
-currentdir = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(os.path.join(currentdir, 'GLM'))
-
-currentdir = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(os.path.join(currentdir, 'GlobalCropRotations'))
-
-currentdir = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(os.path.join(currentdir, 'AgNPP'))
-
 import buildmodref
 
 import sys
@@ -67,7 +58,9 @@ def setup(app):
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('../'))
+sys.path.insert(0, os.path.abspath('GLM/'))
+sys.path.insert(0, os.path.abspath('AgNPP/'))
+sys.path.insert(0, os.path.abspath('GlobalCropRotations/'))
 
 # -- General configuration ------------------------------------------------
 
