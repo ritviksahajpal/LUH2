@@ -60,7 +60,9 @@ MAJOR = _version_major
 MINOR = _version_minor
 MICRO = _version_micro
 VERSION = __version__
-PACKAGES = ['LUH2',
+PACKAGES = ['LUH2.GLM',
+            'LUH2.AgNPP',
+            'LUH2.GlobalCropRotations',
             'LUH2.tests']
 PACKAGE_DATA = {'LUH2': [pjoin('data', '*')]}
 REQUIRES = ["numpy"]
