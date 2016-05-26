@@ -1,5 +1,4 @@
-## shablona
-[![Build Status](https://travis-ci.org/uwescience/shablona.svg?branch=master)](https://travis-ci.org/uwescience/shablona)
+## LUH2
 
 LUH2
 
