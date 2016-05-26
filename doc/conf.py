@@ -28,6 +28,16 @@ source_version = __version__
 
 currentdir = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(os.path.join(currentdir, 'tools'))
+
+currentdir = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(os.path.join(currentdir, 'GLM'))
+
+currentdir = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(os.path.join(currentdir, 'GlobalCropRotations'))
+
+currentdir = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(os.path.join(currentdir, 'AgNPP'))
+
 import buildmodref
 
 import sys
