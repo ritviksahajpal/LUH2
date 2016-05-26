@@ -1,0 +1,41 @@
+[PROJECT]
+; Name of project directory (to be created within out_dir)
+project_name = Crop_Rotations
+; A log file is created as Log_<TAG>.txt
+TAG          = CROP
+fao_data     = crop_func_areas_in_ha_by_country_and_year.xlsx
+fao_sheet    = CropFuncArea(ha)_country&year
+RAW_FAO      = FAO_Crops_area_harvested_Data.xlsx
+RAW_FAO_SHT  = Production_Crops_E_All_Data.csv
+CROP_LUP     = crop_codes_names.xlsx
+CROP_LUP_SHT = crop_codes_names.csv
+FAO_CONCOR   = FAO_ID_concordance.csv
+TEST_CFT     = True ; Assign to each of the 5 CFTs, a constant value (0.2)
+CSV_ROTATIONS = CropRotations/crop_rotations.csv
+
+[PATHS]
+win_prjdir = C:\\Users\\ritvik\\Documents\\PhD\\Projects\\
+mac_prjdir = /Users/ritvik/Documents/Projects/
+; Input directory
+data_dir   = GLM/Input/
+; Output directory
+out_dir    = GLM/Output/
+; FAO directory
+fao_dir    = FAO/
+
+[PARAMETERS]
+; Starting year of FAO data
+FAO_START_YR = 1961
+; Ending year of FAO data
+FAO_END_YR   = 2013
+; Use multiprocessing or not?
+DO_PARALLEL  = True
+; Number of years to use for computing CFT fraction to extend in past
+CFT_FRAC_YR  = 5
+GLM_STRT_YR  = 850
+GLM_END_YR   = 2015
+; Fill data for countries with zero (countries with missing CFT data). If False, use global averages
+FILL_ZEROS   = False
+
+[HYDE]
+hyde32_crop_path = lumip_data/hyde_3.2/quarter_deg_grids_incl_urban/gcrop_850_2015_quarterdeg_incl_urban.nc

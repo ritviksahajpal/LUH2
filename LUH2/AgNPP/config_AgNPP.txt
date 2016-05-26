@@ -1,0 +1,16 @@
+[PROJECT]
+; Name of project directory (to be created within out_dir)
+project_name = AgNPP
+; A log file is created as Log_<TAG>.txt
+TAG          = AgNPP
+
+[PATHS]
+win_prjdir = C:/Users/ritvik/Documents/PhD/Projects/
+mac_prjdir = /Users/ritvik/Documents/Projects/
+base_dir   = GLM/Input/ ; Directory of inputs
+out_dir    = GLM/Output/ ; Output directory
+
+[AgNPP]
+AgNPP_file = AgNPP.xlsx
+
+
