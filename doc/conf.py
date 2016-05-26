@@ -61,6 +61,9 @@ def setup(app):
 sys.path.insert(0, os.path.abspath('../GLM/'))
 sys.path.insert(0, os.path.abspath('../AgNPP/'))
 sys.path.insert(0, os.path.abspath('../GlobalCropRotations/'))
+sys.path.append(os.path.join(currentdir, 'GLM'))
+sys.path.append(os.path.join(currentdir, 'AgNPP'))
+sys.path.append(os.path.join(currentdir, 'GlobalCropRotations'))
 
 # -- General configuration ------------------------------------------------
 
